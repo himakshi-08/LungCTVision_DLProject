@@ -467,7 +467,7 @@ app.use((error, _req, res, _next) => {
 
 async function startServer() {
   await mongoose.connect(MONGO_URI);
-  app.listen(PORT, () =>
+  app.listen(PORT, "0.0.0.0", () =>
     console.log(`Server running on http://localhost:${PORT}`),
   );
 }
